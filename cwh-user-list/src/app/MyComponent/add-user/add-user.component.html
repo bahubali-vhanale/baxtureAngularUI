@@ -1,0 +1,54 @@
+<div class="container my-3">
+  <!-- <hr class="my-4"> -->
+  <h4>Add a User</h4>
+  <hr class="my-4">
+  <form (ngSubmit)="onSubmit()">
+    <!-- <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" [(ngModel)]="username" class="form-control" name="username" id="username"
+        aria-describedby="emailHelp">
+    </div> -->
+
+    <div class="row g-3 align-items-center mb-3">
+      <label for="username" class="form-label">Username</label>
+      <div class="col-auto">
+        <input type="text" [(ngModel)]="username" class="form-control" name="username" id="username"
+          >
+      </div>
+      <div class="col-auto">
+        <span id="username" class="form-text">
+           
+        </span>
+      </div>
+    </div>
+   
+    <div class="row g-3 align-items-center mb-3">
+      <label for="pass" class="form-label">Password</label>
+      <div class="col-auto">
+        <input type="password" [(ngModel)]="pass" class="form-control" name="pass">
+      </div>
+      <div class="col-auto">
+        <span id="password" class="form-text">
+          Must be 8-20 characters long.
+        </span>
+      </div>
+    </div>
+
+    <div class="row g-3 align-items-center mb-3">
+
+      <label for="age" class="form-label">Age</label>
+
+      <div class="col-auto">
+        <input type="number" [(ngModel)]="age" class="form-control" name="age">
+      </div>
+      <div class="col-auto">
+        <span id="age" class="form-text">
+          Age must be in +ve number.
+        </span>
+      </div>
+    </div>
+ 
+    <button type="submit" class="btn btn-primary btn-sm">Add User</button>
+  </form>
+<hr class="my-4">
+</div>

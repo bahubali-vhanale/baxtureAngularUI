@@ -1,0 +1,15 @@
+<div class="container">
+  
+  <div class="my-3">
+    <h5 [ngClass]="{'strike': !user.isAdmin}">{{user.username}}</h5>
+    <p [ngClass]="{'strike': !user.isAdmin}">{{user.pass}}</p>
+    <div class="mb-3 form-check">
+      <!-- <input type="checkbox" class="form-check-input" id="user{{i}}" (click)="onCheckboxClick(user)"
+        [checked]="!user.isAdmin"> -->
+        <input type="checkbox" class="form-check-input" id="user{{i}}" 
+        [checked]="!user.isAdmin">
+      <label class="form-check-label" for="user{{i}}">Admin</label>
+    </div>
+    <button class="btn btn-danger btn-sm" (click)="onclick(user)">Delete</button>
+  </div>
+</div>
